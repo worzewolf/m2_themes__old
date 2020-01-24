@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
     <media>
         <images module="Magento_Catalog">
@@ -9,7 +8,6 @@
             </image>
         </images>
     </media>
-
     <vars module="Magento_Catalog">
         <var name="gallery">
             <var name="arrows">false</var>
@@ -19,7 +17,6 @@
             </var>
             <var name="navdir">vertical</var>
         </var>
-
         <var name="breakpoints">
             <var name="mobile">
                 <var name="conditions">
