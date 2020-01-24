@@ -1,6 +1,6 @@
 <?php
 /**
- * testTheme2 theme.
+ *testTheme2 theme.
  *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
  *@copyright 2020 worzewolf.
 */
