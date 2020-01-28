@@ -2,6 +2,15 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <attribute name="class" value="page-layout-2columns-left"/>
+        <referenceContainer name="content">
+            <container name="lfmao" htmlTag="div" htmlClass="lmfao">
+                <block class="Magento\Framework\View\Element\Text" name="testdrive">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[WELCOME TO HELL]]></argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
         <referenceContainer name="header.panel">
             <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container">
                 <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
@@ -17,6 +26,15 @@
                 <block class="Magento\Framework\View\Element\Text" ifconfig="section/group/field">
                     <arguments>
                         <argument name="text" xsi:type="string"><![CDATA[Activate field]]></argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="sku.test" as="sku.test" label="sku test" htmlTag="div" htmlClass="skutest">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute.phtml" after="product.info.type">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getSku</argument>
+                        <argument name="at_code" xsi:type="string">sku</argument>
+                        <argument name="css_class" xsi:type="string">sku</argument>
                     </arguments>
                 </block>
             </container>
