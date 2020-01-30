@@ -1,0 +1,23 @@
+<?php
+/**
+ *templates_hw theme.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+
+/** @var \Magento\Review\Block\Product\Review $block */
+?>
+<span class="before_review">some text was added right here</span>
+<div id="product-review-container" data-role="product-review"></div>
+<?= $block->getChildHtml() ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Review/js/process-reviews": {
+                "productReviewUrl": "<?= $block->escapeJs($block->escapeUrl($block->getProductReviewUrl())) ?>",
+                "reviewsTabSelector": "#tab-label-reviews"
+            }
+        }
+    }
+</script>
