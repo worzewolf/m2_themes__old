@@ -2,3 +2,17 @@
     color: red;
     text-transform: capitalize;
 }
+.mynewtemplate{
+    color: #fff1ad;
+    background-color: #2A6002;
+    font-size: 15px;
+    width: 200px;
+    height: 100px;
+}
+.boolean-container{
+    background-color: #0A246A;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
