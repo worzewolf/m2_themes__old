@@ -9,7 +9,6 @@
                             <argument name="argument_string" xsi:type="string" translate="true">Argument string</argument>
                             <argument name="argument_boolean" xsi:type="boolean">true</argument>
                             <argument name="argument_url" xsi:type="url" path="checkout/cart/index"/>
-
                             <argument name="img_name" xsi:type="string" >index.png</argument>
                             <argument name="img_alt" xsi:type="string">logo image</argument>
                         </arguments>
