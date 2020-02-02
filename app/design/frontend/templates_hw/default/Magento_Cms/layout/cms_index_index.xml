@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="testingblock" htmlTag="div" htmlClass="testingblock">
+                <block class="Magento\Framework\View\Element\Template" name="home.test.block" template="Magento_Cms::new_template.phtml">
+                    <block class="Magento\Framework\View\Element\Template" name="home.child.block" template="Magento_Cms::new_template2.phtml">
+                        <arguments>
+                            <argument name="argument_string" xsi:type="string" translate="true">Argument string</argument>
+                            <argument name="argument_boolean" xsi:type="boolean">true</argument>
+                            <argument name="argument_url" xsi:type="url" path="checkout/cart/index"/>
+                            <argument name="img_name" xsi:type="string" >index.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

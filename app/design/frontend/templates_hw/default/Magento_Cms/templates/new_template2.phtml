@@ -1,0 +1,36 @@
+<?php
+/**
+ *templates_hw default Cms new_template2 template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?= __('second template') ?>
+<br>
+<?= $block->hasData('argument_string') ? $block->getData('argument_string') : ''; ?>
+<!--variables-->
+<?php
+$arg1 = $block->hasData('argument_url') && $block->getData('argument_url');
+$arg2 = $block->hasData('argument_boolean') && $block->getData('argument_boolean');
+$arg3 = $block->hasData('img_name') && $block->getData('img_name');
+?>
+<!--renders block, if it has an argument "true". if it recieve "false" -  block won't be shown-->
+<?php if ($arg2) : ?>
+<div class="boolean-container">
+    <h3><?= __('Argument boolean:'); ?></h3>
+    <p>
+        <?= $block->getData('argument_boolean')?>
+    </p>
+    <img height="150px" src="<?= $block->getViewFileUrl('images/trollface.jpg')?>" alt="<?= __('alt') ?>">
+    <!--renders image after checking if it has an argument 'img_name'-->
+    <?php if ($arg3) : ?>
+    <img height="150px" src="<?= $block->getViewFileUrl('images/' . $block->getData('img_name')); ?>" alt="<?= $block->getData('img_alt') ?>">
+    <?php endif;?>
+</div>
+<!--renders link taken from xml with path written in xml argument-->
+<?php endif;?>
+<div class="new_url">
+<?php if ($arg1) : ?>
+    <a href="<?= $block->getData('argument_url')?>">link</a>
+<?php endif;?>
+</div>
