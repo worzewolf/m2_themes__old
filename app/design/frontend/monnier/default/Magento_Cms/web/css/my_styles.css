@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "AT Sackers Heavy Gothic";
+    src: url("../fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Helvetica Inserat - Roman";
+    src: url("../fonts/HelveticaInseratLTStd-Roman.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+#MyWrapper,
+#maincontent{
+    max-width: 1366px;
+    padding: 0;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+.editorial{
+    display: flex;
+}
+.right_side .images{
+    width: 100%;
+    position: relative;
+}
+.right_side .images .image_block:before{
+    content: attr(data-name);
+    position: absolute;
+    top: 32px;
+    left: 21px;
+    font-family: "Helvetica Inserat - Roman";
+    font-size: 67px;
+    text-transform: uppercase;
+    width: 260px;
+    line-height: 60px;
+}
+.right_side .images p{
+    padding: 0 10%;
+}
+.image_block{
+    position: relative;
+}
+.image_content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+h2,h3,h6{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+h2{
+    font-size: 2.2rem;
+    margin: 1.8rem 0;
+    letter-spacing: .3rem;
+}
+h3{
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-family: "AT Sackers Heavy Gothic",Sans-serif;
+}
+h4{
+    font-family: "Helvetica Inserat - Roman";
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h6{
+    letter-spacing: .15rem;
+    margin: 2rem 0 .4rem;
+}
+.images p{
+    text-align: center;
+    padding: 0.9rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: .1rem;
+}
+.images a{
+    text-decoration: underline;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+.images img{
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+}
+@media screen and (min-width: 320px){
+    .editorial{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .left_side,
+    .right_side{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .images{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: calc(100% - 20px);
+        padding: 10px 10px 5px 10px;
+    }
+}
+@media screen and (min-width: 768px){
+    .left_side,
+    .right_side{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .images{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 0 10px 28px 9px;
+    }
+}
+@media screen and (min-width: 992px){
+    .editorial{
+        max-width: 1366px;
+        padding: 0 30px;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .images{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: calc(50% - 20px);
+    }
+}

@@ -1,0 +1,33 @@
+<?php
+/**
+ *monnier default Cms editorial template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php
+$arg1 = $block->hasData('img_name') && $block->getData('img_name');
+$arg2 = $block->hasData('img_alt') && $block->getData('img_alt');
+$arg3 = $block->hasData('img_subtitle') && $block->getData('img_subtitle');
+$arg4 = $block->hasData('img_title') && $block->getData('img_title');
+$arg5 = $block->hasData('img_text') && $block->getData('img_text');
+?>
+<div class="images">
+    <div class="image_block" data-name="hero product">
+    <?php if ($arg1) : ?>
+        <img src="<?= $block->getViewFileUrl('images/' . $block->getData('img_name')); ?>" alt="<?= $block->getData('img_alt') ?>">
+    <?php endif;?>
+    </div>
+    <div class="image_content">
+    <?php if ($arg3) : ?>
+        <h6><?= $block->getData('img_subtitle')?></h6>
+    <?php endif;?>
+    <?php if ($arg4) : ?>
+        <h3><?= $block->getData('img_title')?></h3>
+    <?php endif;?>
+    <?php if ($arg5) : ?>
+        <p><?= $block->getData('img_text')?></p>
+    <?php endif;?>
+    <a href="#">DÉCOUVRIR</a>
+    </div>
+</div>
