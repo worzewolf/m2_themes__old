@@ -42,7 +42,7 @@
     width: 100%;
     position: relative;
 }
-.right_side .images .image_block:before{
+.image_block .hero_product{
     content: attr(data-name);
     position: absolute;
     top: 32px;

@@ -52,6 +52,7 @@
                             <argument name="img_subtitle" xsi:type="string">fanny bag pack by heron preston</argument>
                             <argument name="img_title" xsi:type="string">hero product</argument>
                             <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                            <argument name="hero_product" translate="true" xsi:type="string">hero product</argument>
                         </arguments>
                     </block>
                 </block>
