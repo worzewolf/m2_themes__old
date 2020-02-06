@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="header-banner" template="Magento_Theme::top-header-banner.phtml" before="header.panel"/>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/header-icons/Logo.png</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true"/>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </block>
+            <referenceBlock class="Magento\Theme\Block\Html\Header" name="header" as="header" before="-" remove="true"/>
+            <referenceBlock class="Magento\Customer\Block\Account\RegisterLink" name="register-link" remove="true"/>
+            <referenceBlock class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link"  remove="true"/>
+        </referenceBlock>
+            <move element="top.search" destination="top.links" before="wish-list-link"/>
+            <move element="minicart" destination="top.links" after="wishlist"/>
+        <referenceBlock class="Magento\Framework\View\Element\Html\Links" name="footer_links" remove="true"/>
+        <referenceBlock class="Magento\Framework\View\Element\Html\Links" name="copyright" remove="true"/>
+        <referenceBlock class="Magento\Framework\View\Element\Html\Links" name="report.bugs" remove="true"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer.navigation" template="Magento_Theme::footer-navigation.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="footer.navigation.child1" template="Magento_Theme::footer-navigation-child.phtml">
+                    <arguments>
+                        <argument name="footer.navigation.title" xsi:type="string" translate="true">services exclusifs</argument>
+                        <argument name="footer.navigation.link1" xsi:type="string" translate="true">Livraison le samedi</argument>
+                        <argument name="footer.navigation.link2" xsi:type="string" translate="true">Emballage cadeau offert</argument>
+                        <argument name="footer.navigation.link3" xsi:type="string" translate="true">Livraison et retours gratuits</argument>
+                        <argument name="trusted.shops" xsi:type="string">trusted_shops.png</argument>
+                        <argument name="trusted.shops.alt" xsi:type="string">trusted_shops</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="footer.navigation.child2" template="Magento_Theme::footer-navigation-child.phtml">
+                    <arguments>
+                        <argument name="footer.navigation.title" xsi:type="string" translate="true">besoin d'aide ?</argument>
+                        <argument name="footer.navigation.link1" xsi:type="string" translate="true">Nous contacter</argument>
+                        <argument name="footer.navigation.link2" xsi:type="string" translate="true">FAQ</argument>
+                        <argument name="footer.navigation.link3" xsi:type="string" translate="true">Modes de paiement</argument>
+                        <argument name="footer.navigation.link4" xsi:type="string" translate="true">Livraison</argument>
+                        <argument name="footer.navigation.link5" xsi:type="string" translate="true">Retours</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="footer.navigation.child3" template="Magento_Theme::footer-navigation-child.phtml">
+                    <arguments>
+                        <argument name="footer.navigation.title" xsi:type="string" translate="true">a propos</argument>
+                        <argument name="footer.navigation.link1" xsi:type="string" translate="true">Qui sommes-nous ?</argument>
+                        <argument name="footer.navigation.link2" xsi:type="string" translate="true">CGV</argument>
+                        <argument name="footer.navigation.link3" xsi:type="string" translate="true">Mentions legales</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="footer.navigation.child4" template="Magento_Theme::footer-navigation-child.phtml">
+                    <arguments>
+                        <argument name="footer.navigation.title" xsi:type="string" translate="true">retrouvez -nous sur</argument>
+                        <argument name="footer.navigation.social-link1" xsi:type="string" translate="true">Facebook</argument>
+                        <argument name="footer.navigation.social-link2" xsi:type="string" translate="true">Instagram</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
