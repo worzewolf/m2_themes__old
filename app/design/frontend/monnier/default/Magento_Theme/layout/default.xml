@@ -11,18 +11,17 @@
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/header-icons/Logo.png</argument>
+                <argument name="logo_img_height" xsi:type="number">55</argument>
             </arguments>
         </referenceBlock>
-        <referenceBlock name="top.links">
-            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
-                    <argument name="sortOrder" xsi:type="number">110</argument>
-                </arguments>
-            </block>
+        <referenceBlock class="Magento\Customer\Block\Account\Link" name="top.search">
+            <arguments>
+                <argument name="sortOrder" xsi:type="number">50</argument>
+            </arguments>
         </referenceBlock>
-        <move element="top.search" destination="top.links" before="wish-list-link"/>
-        <move element="minicart" destination="top.links" after="wishlist"/>
+        <move element="top.search" destination="top.links"/>
+        <move element="minicart" destination="top.links"/>
+        <move element="wish-list-link" destination="top.links"/>
         <referenceBlock name="header"  remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
         <referenceBlock name="authorization-link"  remove="true"/>
