@@ -1,10 +1,9 @@
 <?php
 
 /**
-
-autoStore module.
-@author Vladislav Romaniuk vlad96r@protonmial.com
-@copyright 2020 Vlromaniuk
+ *avto module.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
  */
 
 

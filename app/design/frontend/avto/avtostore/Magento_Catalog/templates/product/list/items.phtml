@@ -202,8 +202,6 @@ switch ($type = $block->getType()) {
                                     <?= $block->getImage($_item, $image)->toHtml() ?>
                                 </a>
                                 <div class="product details product-item-details">
-
-
                                     <?php if ($showAddTo || $showCart) :?>
                                         <div class="product actions product-item-actions">
                                             <?php if ($showCart) :?>
@@ -232,7 +230,6 @@ switch ($type = $block->getType()) {
                                                     <?php endif; ?>
                                                 </div>
                                             <?php endif; ?>
-
                                             <?php if ($showAddTo) :?>
                                                 <div class="secondary-addto-links actions-secondary" data-role="add-to-links">
                                                     <?php if ($canItemsAddToCart && !$_item->isComposite() && $_item->isSaleable() && $type == 'related') :?>
