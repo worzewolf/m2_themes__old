@@ -11,6 +11,9 @@
             }
         }
     }
+
+
+
 </script>
 <div class="array-test-ko" data-bind="scope: 'simpleComponent'">
     <button type="button" class="action" data-trigger="trigger">
@@ -29,7 +32,7 @@
         }}">
         <form id="add-item-form" action="" data-bind="submit: addItem">
             <label for="">
-                <span><?=__("name"); ?></span>
+                <span><?= __("name"); ?></span>
                 <input type="text" name="productName">
             </label>
             <label for="">
@@ -40,7 +43,7 @@
                 <span><?= __("price"); ?></span>
                 <input type="number" name="productPrice">
             </label>
-            <button type="submit" >Submit</button>
+            <button type="submit"><?= __("submit"); ?></button>
         </form>
     </div>
     <h3 data-bind="text: label"></h3>
@@ -57,27 +60,33 @@
         <!-- ko foreach: items -->
         <tr>
             <th data-bind="text: name"></th>
-            <th><button data-bind="click: $parent.reduce.bind($parent)">-</button></th>
+            <th>
+                <button data-bind="click: $parent.reduce.bind($parent)">-</button>
+            </th>
             <th data-bind="text: qty"></th>
-            <th><button data-bind="click: $parent.increase.bind($parent)">+</button></th>
+            <th>
+                <button data-bind="click: $parent.increase.bind($parent)">+</button>
+            </th>
             <th data-bind="text: price"></th>
             <td data-bind="text: $parent.rowTotal($data)"></td>
-            <td><button data-bind="click: function(){if($parent.items.length > 0){$parent.items.remove(this)}}">Delete</button></td>
+            <td>
+                <button data-bind="click: function(){if($parent.items.length > 0){$parent.items.remove(this)}}"><?= __("delete"); ?></button>
+            </td>
         </tr>
         <!-- /ko -->
     </table>
     <div>
         <p>
             <span>
-            <!-- ko i18n:  'Additional charge' --><!-- /ko -->:&nbsp;
+            <!-- ko i18n:  'Additional charge' --><!-- /ko -->:
                 <!-- ko text:  additional_charge($data) --><!-- /ko -->
-        </span>
+            </span>
         </p>
         <p>
             <span>
-            <!-- ko i18n:  'Total' --><!-- /ko -->:&nbsp;
+            <!-- ko i18n:  'Total' --><!-- /ko -->:
                 <!-- ko text:  total() --><!-- /ko -->
-        </span>
+            </span>
         </p>
     </div>
 </div>
