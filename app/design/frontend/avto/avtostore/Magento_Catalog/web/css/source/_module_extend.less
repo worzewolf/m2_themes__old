@@ -236,6 +236,45 @@
     }
   }
 
+  .block.related .block-actions {
+    display: none;
+  }
+
+  .block.related .block-title.title {
+    text-align: center;
+    margin-top: 40px;
+
+    .related-pretitle {
+      text-transform: uppercase;
+      color: @autostore_color-alizarin;
+    }
+
+    .related-heading {
+      font-size: 34px;
+      text-transform: uppercase;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        background: @autostore_color-alizarin;
+        width: 10px;
+        height: 10px;
+        top: 15px;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      &::before {
+        left: -15px;
+      }
+
+      &::after {
+        right: -15px;
+      }
+    }
+  }
+
   .block.related .product-items .item.product.product-item,
   .page-main .column.main .product-items .item.product.product-item {
     position: relative;

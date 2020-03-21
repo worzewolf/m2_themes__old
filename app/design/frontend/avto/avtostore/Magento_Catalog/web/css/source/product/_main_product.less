@@ -5,7 +5,7 @@
 
   .product-info-main .page-title-wrapper .page-title {
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: @h1__font-size;
     line-height: 26px;
     padding-bottom: 14px;
   }
@@ -68,7 +68,7 @@
 
   .price-box.price-final_price .price-label,
   .product-info-main .price-box .price-wrapper .price, .product-options-bottom .price-box .price-wrapper .price {
-    font-size: 24px;
+    font-size: @autostore_product-price-font-size;
   }
 
   .product-info-main .box-tocart {
@@ -241,45 +241,6 @@
       flex-wrap: wrap;
       width: 40%;
     }
-  }
-
-  .block.related .block-title.title {
-    text-align: center;
-    margin-top: 40px;
-
-    .related-pretitle {
-      text-transform: uppercase;
-      color: @autostore_color-alizarin;
-    }
-
-    .related-heading {
-      font-size: 34px;
-      text-transform: uppercase;
-      position: relative;
-
-      &::before,
-      &::after {
-        content: '';
-        background: @autostore_color-alizarin;
-        width: 10px;
-        height: 10px;
-        top: 15px;
-        position: absolute;
-        border-radius: 50%;
-      }
-
-      &::before {
-        left: -15px;
-      }
-
-      &::after {
-        right: -15px;
-      }
-    }
-  }
-
-  .block.related .block-actions {
-    display: none;
   }
 
   .owl-carousel .owl-nav {
