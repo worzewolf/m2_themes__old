@@ -32,18 +32,18 @@
         }}">
         <form id="add-item-form" action="" data-bind="submit: addItem">
             <label for="">
-                <span><?= __("name"); ?></span>
+                <span data-bind="i18n: 'name'"></span>
                 <input type="text" name="productName">
             </label>
             <label for="">
-                <span><?= __("qty"); ?></span>
+                <span data-bind="i18n: 'qty'"></span>
                 <input type="number" name="productQty">
             </label>
             <label for="">
-                <span><?= __("price"); ?></span>
+                <span data-bind="i18n: 'price'"></span>
                 <input type="number" name="productPrice">
             </label>
-            <button type="submit"><?= __("submit"); ?></button>
+            <button type="submit" data-bind="i18n: 'submit'"></button>
         </form>
     </div>
     <h3 data-bind="text: label"></h3>
@@ -70,7 +70,7 @@
             <th data-bind="text: price"></th>
             <td data-bind="text: $parent.rowTotal($data)"></td>
             <td>
-                <button data-bind="click: function(){if($parent.items.length > 0){$parent.items.remove(this)}}"><?= __("delete"); ?></button>
+                <button data-bind="click: function(){if($parent.items.length > 0){$parent.items.remove(this)}}" data-bind="i18n: 'delete'">></button>
             </td>
         </tr>
         <!-- /ko -->
