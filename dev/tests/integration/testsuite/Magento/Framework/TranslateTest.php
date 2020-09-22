@@ -43,7 +43,7 @@ class TranslateTest extends \PHPUnit\Framework\TestCase
 
         /** @var \Magento\Framework\View\Design\ThemeInterface|MockObject $theme */
         $theme = $this->createMock(\Magento\Framework\View\Design\ThemeInterface::class);
-        $theme->expects($this->any())->method('getThemePath')->will($this->returnValue('Magento/luma'));
+        $theme->expects($this->any())->method('getThemePath')->will($this->returnValue('Magento/magento_theme'));
 
         /** @var \Magento\TestFramework\ObjectManager $objectManager */
         $objectManager = Bootstrap::getObjectManager();

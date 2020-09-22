@@ -152,11 +152,11 @@ class FallbackTest extends \PHPUnit\Framework\TestCase
             ],
             'inherit parent theme' => [
                 'Vendor_ViewTest/custom_theme', 'en_US',
-                '%s/frontend/Vendor/custom_theme/i18n/en_US.csv',
+                '%s/frontend/Vendor/custom_theme/i18n/ru_RU.csv',
             ],
             'inherit grandparent theme' => [
                 'Vendor_ViewTest/custom_theme2', 'en_US',
-                '%s/frontend/Vendor/custom_theme/i18n/en_US.csv',
+                '%s/frontend/Vendor/custom_theme/i18n/ru_RU.csv',
             ],
         ];
     }

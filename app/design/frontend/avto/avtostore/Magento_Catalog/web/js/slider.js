@@ -8,9 +8,9 @@ define([
         'use strict';
         var element = $('#slider-range');
         element.slider({
-            min: 0,
+            min: 50,
             max: 700,
-            values: [ 0, 200 ],
+            values: [ 100, 200 ],
             slide: function( event, ui ) {
                 $( "#amount" ).text( "$" + ui.values[ 0 ]);
                 $( "#amount2" ).text( "$" + ui.values[ 1 ]);

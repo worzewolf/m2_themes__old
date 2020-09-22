@@ -22,7 +22,7 @@ class SourceThemeDeployCommandTest extends \PHPUnit\Framework\TestCase
 
     const LOCALE_TEST_VALUE = 'en_US';
 
-    const THEME_TEST_VALUE = 'Magento/luma';
+    const THEME_TEST_VALUE = 'Magento/magento_theme';
 
     const TYPE_TEST_VALUE = 'less';
 

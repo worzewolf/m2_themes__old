@@ -92,7 +92,7 @@ class AreaTest extends \PHPUnit\Framework\TestCase
         $design = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(
             \Magento\Framework\View\DesignInterface::class
         );
-        $this->assertEquals('Magento/luma', $design->getDesignTheme()->getThemePath());
+        $this->assertEquals('Magento/magento_theme', $design->getDesignTheme()->getThemePath());
     }
 
     // @codingStandardsIgnoreStart

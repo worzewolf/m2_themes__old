@@ -220,11 +220,11 @@ class ApplicationDumpCommandTest extends \PHPUnit\Framework\TestCase
             $config['system']['default']['design']['theme']['theme_id']
         );
         $this->assertEquals(
-            'frontend/Magento/luma',
+            'frontend/Magento/magento_theme',
             $config['system']['stores']['default']['design']['theme']['theme_id']
         );
         $this->assertEquals(
-            'frontend/Magento/luma',
+            'frontend/Magento/magento_theme',
             $config['system']['websites']['base']['design']['theme']['theme_id']
         );
 
@@ -293,14 +293,14 @@ class ApplicationDumpCommandTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(
             [
                 'parent_id' => 'Magento/blank',
-                'theme_path' => 'Magento/luma',
+                'theme_path' => 'Magento/magento_theme',
                 'theme_title' => 'Magento Luma',
                 'is_featured' => '0',
                 'area' => 'frontend',
                 'type' => '0',
-                'code' => 'Magento/luma',
+                'code' => 'Magento/magento_theme',
             ],
-            $config['themes']['frontend/Magento/luma']
+            $config['themes']['frontend/Magento/magento_theme']
         );
     }
 

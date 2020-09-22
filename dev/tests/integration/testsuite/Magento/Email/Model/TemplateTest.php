@@ -535,7 +535,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Set 'Magento/luma' for the 'fixturestore' store.
+     * Set 'Magento/magento_theme' for the 'fixturestore' store.
      * Application isolation is required, if a test uses this method.
      */
     protected function setNotDefaultThemeForFixtureStore()
@@ -544,7 +544,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $theme = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(
             \Magento\Framework\View\Design\ThemeInterface::class
         );
-        $theme->load('Magento/luma', 'theme_path');
+        $theme->load('Magento/magento_theme', 'theme_path');
         \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(
             \Magento\Framework\App\Config\MutableScopeConfigInterface::class
         )->setValue(
@@ -599,7 +599,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
         $this->setNotDefaultThemeForFixtureStore();
         $this->assertStringMatchesFormat(
-            '%s/frontend/Magento/luma/en_US/Magento_Theme/favicon.ico',
+            '%s/frontend/Magento/magento_theme/en_US/Magento_Theme/favicon.ico',
             $this->model->getProcessedTemplateSubject([])
         );
 
@@ -621,7 +621,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             ->load();
 
         $this->assertStringEndsWith(
-            '/frontend/Magento/luma/en_US/Magento_Email/logo_email.png',
+            '/frontend/Magento/magento_theme/en_US/Magento_Email/logo_email.png',
             $this->model->getDefaultEmailLogo()
         );
     }

@@ -35,12 +35,12 @@ $configData = [
     ],
     'stores' => [
         'default' => [
-            DesignInterface::XML_PATH_THEME_ID => $themeList->getThemeByFullPath('frontend/Magento/luma')->getThemeId()
+            DesignInterface::XML_PATH_THEME_ID => $themeList->getThemeByFullPath('frontend/Magento/magento_theme')->getThemeId()
         ]
     ],
     'websites' => [
         'base' => [
-            DesignInterface::XML_PATH_THEME_ID => $themeList->getThemeByFullPath('frontend/Magento/luma')->getThemeId()
+            DesignInterface::XML_PATH_THEME_ID => $themeList->getThemeByFullPath('frontend/Magento/magento_theme')->getThemeId()
         ]
     ],
 ];

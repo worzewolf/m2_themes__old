@@ -33,7 +33,7 @@ module.exports = {
     },
     luma: {
         area: 'frontend',
-        name: 'Magento/luma',
+        name: 'Magento/magento_theme',
         locale: 'en_US',
         files: [
             'css/styles-m',

@@ -51,7 +51,7 @@ class AbstractBlockTest extends \PHPUnit\Framework\TestCase
     {
         $cssUrl = $this->_block->getViewFileUrl(
             'css/wrong.css',
-            ['area' => 'frontend', 'theme' => 'Magento/luma', 'locale' => 'en_US']
+            ['area' => 'frontend', 'theme' => 'Magento/magento_theme', 'locale' => 'en_US']
         );
         $this->assertStringMatchesFormat('%s/css/wrong.css', $cssUrl);
     }

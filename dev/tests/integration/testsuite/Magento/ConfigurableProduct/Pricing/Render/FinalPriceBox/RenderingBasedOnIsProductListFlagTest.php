@@ -62,7 +62,7 @@ class RenderingBasedOnIsProductListFlagTest extends \PHPUnit\Framework\TestCase
             'price' => $this->finalPrice,
             'rendererPool' => $this->rendererPool,
         ]);
-        $this->finalPriceBox->setTemplate('Magento_ConfigurableProduct::product/price/final_price.phtml');
+        $this->finalPriceBox->setTemplate('Magento_ConfigurableProduct::product/price/discount.phtml');
 
         /** @var Product $childProduct */
         $childProduct = $productRepository->get('simple_10', true);

@@ -145,7 +145,7 @@ class DeployStaticContentCommandTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(Cli::RETURN_SUCCESS, $this->commandTester->getStatusCode());
         $this->assertContains('Execution time:', $commandOutput);
         $this->assertContains('frontend/Magento/blank/en_US', $commandOutput);
-        $this->assertNotContains('frontend/Magento/luma/en_US', $commandOutput);
+        $this->assertNotContains('frontend/Magento/magento_theme/en_US', $commandOutput);
         $this->assertNotContains('adminhtml/Magento/backend', $commandOutput);
     }
 

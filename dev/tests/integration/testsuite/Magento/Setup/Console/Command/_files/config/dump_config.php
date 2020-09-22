@@ -81,14 +81,14 @@ return [
                     'type' => '0',
                     'code' => 'Magento/blank',
             ],
-            'frontend/Magento/luma' => [
+            'frontend/Magento/magento_theme' => [
                     'parent_id' => 'Magento/blank',
-                    'theme_path' => 'Magento/luma',
+                    'theme_path' => 'Magento/magento_theme',
                     'theme_title' => 'Magento Luma',
                     'is_featured' => '0',
                     'area' => 'frontend',
                     'type' => '0',
-                    'code' => 'Magento/luma',
+                    'code' => 'Magento/magento_theme',
             ],
     ],
 ];

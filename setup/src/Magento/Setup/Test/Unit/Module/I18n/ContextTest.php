@@ -120,9 +120,9 @@ class ContextTest extends \PHPUnit\Framework\TestCase
                 [[ComponentRegistrar::MODULE, 'Magento_Module', BP . '/app/code/Magento/Module']]
             ],
             [
-                BP . '/app/design/frontend/Magento/luma/i18n/',
-                [Context::CONTEXT_TYPE_THEME, 'frontend/Magento/luma'],
-                [[ComponentRegistrar::THEME, 'frontend/Magento/luma', BP . '/app/design/frontend/Magento/luma']]
+                BP . '/app/design/frontend/Magento/magento_theme/i18n/',
+                [Context::CONTEXT_TYPE_THEME, 'frontend/Magento/magento_theme'],
+                [[ComponentRegistrar::THEME, 'frontend/Magento/magento_theme', BP . '/app/design/frontend/Magento/magento_theme']]
             ],
 
             [

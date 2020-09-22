@@ -24,7 +24,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
     /**
      * This test expects next themes for areas:
-     * current_store design/theme/full_name Magento/luma
+     * current_store design/theme/full_name Magento/magento_theme
      * fixturestore_store design/theme/full_name Magento/blank
      *
      * @magentoAppIsolation  enabled
@@ -62,7 +62,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     public function getProcessedTemplateFrontendDataProvider()
     {
         return [
-            'frontend' => ['default', 'Magento/luma'],
+            'frontend' => ['default', 'Magento/magento_theme'],
             'frontend store' => ['fixturestore', 'Magento/blank']
         ];
     }

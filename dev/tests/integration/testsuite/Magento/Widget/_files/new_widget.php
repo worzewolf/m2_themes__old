@@ -16,7 +16,7 @@ $model = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()
 $theme = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(
     \Magento\Framework\View\Design\ThemeInterface::class
 );
-$theme->load('Magento/luma', 'theme_path');
+$theme->load('Magento/magento_theme', 'theme_path');
 
 $model->setData(
     [
